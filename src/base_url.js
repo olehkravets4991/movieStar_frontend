@@ -1,1 +1,1 @@
-export const baseUrl = "https://movie-star-backend.onrender.com"
+export const baseUrl = process.env.REACT_APP_BASE_URL
