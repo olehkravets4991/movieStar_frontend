@@ -9,7 +9,7 @@ import {
   import Main from "./pages/Main";
   import Signup from "./pages/Signup";
   import Login from "./pages/Login";
-  import { peopleLoader, personLoader, mainLoader } from "./loaders";
+  import { moviesLoader, movieLoader, mainLoader } from "./loaders";
   import { createAction, updateAction, deleteAction, signupAction, loginAction } from "./actions";
   
   const router = createBrowserRouter(createRoutesFromElements(
