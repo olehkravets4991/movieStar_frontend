@@ -4,7 +4,7 @@ import { baseUrl } from "../base_url";
 
 function Index(props) {
   // GET THE DATA FROM OUR LOADER
-  const movie = useLoaderData();
+  const movies = useLoaderData();
   const navigate = useNavigate() // get function to send people to other pages
   return (
     <div>
@@ -23,7 +23,7 @@ function Index(props) {
             <input type="submit" value="Create a movie"/>
         </Form>
 
-      {movie.map((movie, index) => {
+      {movies.map((movie, index) => {
         return (
           <div key={movie._id} className="movie">
             <Link to={`/${movie._id}`}>
