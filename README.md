@@ -18,7 +18,12 @@ dashboard
 
 ## List of Components
 Header
-Outlet
+actions
+index
+login
+main
+show
+signup
 
 ## Mock UP of UI
 
