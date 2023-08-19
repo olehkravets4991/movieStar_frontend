@@ -8,8 +8,22 @@
 - [**LINK TO TRELLO**](https://trello.com/b/1idSkpyI/movie-star-the-app)
 
 ## List of React Routes
+signup
+login
+:id
+create
+update/:id
+delete/:id
+dashboard
 
 ## List of Components
+Header
+actions
+index
+login
+main
+show
+signup
 
 ## Mock UP of UI
 
@@ -20,5 +34,3 @@
 ## Trello
 
 [**LINK TO TRELLO**](https://dbdiagram.io/d/64e0f47102bd1c4a5e0d533a)
-
-![ERD](/public/ERD.png)
