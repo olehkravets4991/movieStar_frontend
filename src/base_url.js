@@ -1,0 +1,1 @@
+export const baseUrl = "https://movie-star-backend.onrender.com"

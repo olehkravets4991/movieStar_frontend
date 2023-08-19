@@ -23,7 +23,7 @@ function Index(props) {
             <input type="submit" value="Create a movie"/>
         </Form>
 
-      {people.map((movie, index) => {
+      {movie.map((movie, index) => {
         return (
           <div key={movie._id} className="movie">
             <Link to={`/${movie._id}`}>
