@@ -6,15 +6,17 @@ function Show(props) {
 
   return (
     <div className="movie">
-      <h1>{movie.name}</h1>
-      <h2>{movie.title}</h2>
-      <img src={movie.image} alt={movie.name} />
+      <h1>{movie.Title}</h1>
+      <h2>{movie.Genres}</h2>
+      <h3>{movie.ReleaseDate}</h3>
+      <img src={movie.Poster} alt={movie.Title} />
 
-    <h2>Update {movie.name}</h2>
+    <h2>Update {movie.Title}</h2>
     <Form action={`/update/${movie._id}`} method="post">
-        <input type="text" name="name" placeholder="movies name" defaultValue={movie.name}/>
-        <input type="text" name="title" placeholder="movies title" defaultValue={movie.title}/>
-        <input type="text" name="image" placeholder="movies image" defaultValue={movie.image}/>
+        <input type="text" name="Title" placeholder="Movie's Title" defaultValue={movie.Title}/>
+        <input type="text" name="Genres" placeholder="Movie's Genres" defaultValue={movie.Genres}/>
+        <input type="text" name="ReleaseDate" placeholder="Movie's Release date" defaultValue={movie.ReleaseDate}/>
+        <input type="text" name="Poster" placeholder="Movie's Poster" defaultValue={movie.Poster}/>
         <input type="submit" value="Update Movie"/>
     </Form>
     <h2>Delete Person</h2>
