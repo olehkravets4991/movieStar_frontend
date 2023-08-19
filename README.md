@@ -21,4 +21,3 @@
 
 [**LINK TO TRELLO**](https://dbdiagram.io/d/64e0f47102bd1c4a5e0d533a)
 
-![ERD](/public/ERD.png)
