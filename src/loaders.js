@@ -22,7 +22,7 @@ export const moviesLoader = async () => {
     return movies
 }
 
-export const personLoader = async ({params}) => {
+export const movieLoader = async ({params}) => {
 
     if (!authCheck()){
         return redirect('/login')

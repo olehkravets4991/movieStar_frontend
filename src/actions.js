@@ -8,10 +8,10 @@ export const createAction = async ({request}) => {
     const formData = await request.formData()
     // setup the object for our new person
     const newMovie = {
-        name: formData.get('name'),
-        image: formData.get('image'),
-        title: formData.get('title'),
-        rating: formData.get('rating')
+        Title: formData.get('Title'),
+        Genres: formData.get('Genres'),
+        ReleaseDate: formData.get('ReleaseDate'),
+        Poster: formData.get('Poster')
     }
     // send the new person to our backend API
     await fetch(`${baseUrl}/movies`, {
@@ -37,10 +37,10 @@ export const updateAction = async ({request, params}) => {
     const formData = await request.formData()
     // build out the updated person
     const updatedMovie = {
-        name: formData.get('name'),
-        image: formData.get('image'),
-        title: formData.get('title'),
-        rating: formData.get('rating')
+        Title: formData.get('Title'),
+        Genres: formData.get('Genres'),
+        ReleaseDate: formData.get('ReleaseDate'),
+        Poster: formData.get('Poster')
     }
     // send the updated person to our backend API
     await fetch(`${baseUrl}/movies/${id}`, {
