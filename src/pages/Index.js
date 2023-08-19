@@ -14,6 +14,7 @@ function Index(props) {
             <input type="text" name="Poster" placeholder="Movie's Poster"/>
             <input type="submit" value="Create a movie"/>
         </Form>
+        
       {people.map((movie, index) => {
         return (
           <div key={movie._id} className="movie">
