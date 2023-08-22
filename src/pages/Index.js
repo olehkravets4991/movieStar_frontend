@@ -5,8 +5,10 @@ import { baseUrl } from "../base_url";
 function Index(props) {
   // GET THE DATA FROM OUR LOADER
   const movies = useLoaderData();
-//   console.log("Movies:", movies);
   const navigate = useNavigate() // get function to send people to other pages
+
+
+
   return (
     <div>
          <button onClick={async () => {
@@ -17,10 +19,10 @@ function Index(props) {
       
         <h2>Create a new movie </h2>
         <Form action="/create" method="post">
-            <input type="text" name="Title" placeholder="Movie's title"/>
-            <input type="text" name="Genres" placeholder="Movie's Genres"/>
-            <input type="text" name="ReleaseDate" placeholder="Movie's Release date"/>
-            <input type="text" name="Poster" placeholder="Movie's Poster"/>
+            <input type="text" name="title" placeholder="Movie's title"/>
+            <input type="text" name="genres" placeholder="Movie's Genres"/>
+            <input type="text" name="releaseDate" placeholder="Movie's Release date"/>
+            <input type="text" name="poster" placeholder="Movie's Poster"/>
             <input type="submit" value="Create a movie"/>
         </Form>
 
@@ -28,11 +30,11 @@ function Index(props) {
         return (
           <div key={movie._id} className="movie">
             <Link to={`/${movie._id}`}>
-              <h1>{movie.Title}</h1>
+              <h1>{movie.title}</h1>
             </Link>
-            <img src={movie.Poster} alt={movie.Title} />
-             <h3>{movie.Genres}</h3>
-            <h4>{movie.ReleaseDate}</h4>
+            <img src={movie.poster} alt={movie.title} />
+             <h3>{movie.genres}</h3>
+            <h4>{movie.releaseDate}</h4>
           </div>
         );
       })}
