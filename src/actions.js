@@ -8,10 +8,10 @@ export const createAction = async ({request}) => {
     const formData = await request.formData()
     // setup the object for our new person
     const newMovie = {
-        Title: formData.get('Title'),
-        Genres: formData.get('Genres'),
-        ReleaseDate: formData.get('ReleaseDate'),
-        Poster: formData.get('Poster')
+        title: formData.get('Title'),
+        genres: formData.get('Genres'),
+        releaseDate: formData.get('ReleaseDate'),
+        poster: formData.get('Poster')
     }
     // send the new person to our backend API
     await fetch(`${baseUrl}/movies`, {
