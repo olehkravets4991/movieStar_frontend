@@ -32,7 +32,7 @@ function Index(props) {
             <Link to={`/${movie._id}`}>
               <h1>{movie.title}</h1>
             </Link>
-            <img src={movie.poster} alt={movie.title} />
+            <img src={movie.poster} alt={movie.name} />
              <h3>{movie.genres}</h3>
             <h4>{movie.releaseDate}</h4>
           </div>
