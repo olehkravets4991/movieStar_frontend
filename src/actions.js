@@ -8,10 +8,10 @@ export const createAction = async ({request}) => {
     const formData = await request.formData()
     // setup the object for our new person
     const newMovie = {
-        Title: formData.get('Title'),
-        Genres: formData.get('Genres'),
-        ReleaseDate: formData.get('ReleaseDate'),
-        Poster: formData.get('Poster')
+        title: formData.get('title'),
+        genres: formData.get('genres'),
+        releaseDate: formData.get('releaseDate'),
+        poster: formData.get('poster')
     }
     // send the new person to our backend API
     await fetch(`${baseUrl}/movies`, {
@@ -37,10 +37,10 @@ export const updateAction = async ({request, params}) => {
     const formData = await request.formData()
     // build out the updated person
     const updatedMovie = {
-        Title: formData.get('Title'),
-        Genres: formData.get('Genres'),
-        ReleaseDate: formData.get('ReleaseDate'),
-        Poster: formData.get('Poster')
+        title: formData.get('title'),
+        genres: formData.get('genres'),
+        releaseDate: formData.get('releaseDate'),
+        poster: formData.get('poster')
     }
     // send the updated person to our backend API
     await fetch(`${baseUrl}/movies/${id}`, {
@@ -134,3 +134,5 @@ export const loginAction = async ({request}) => {
     // redirect back to the frontend index route
     return redirect('/dashboard')
 }
+
+// hellooooooo
