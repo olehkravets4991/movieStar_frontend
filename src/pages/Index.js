@@ -6,6 +6,9 @@ function Index(props) {
   // GET THE DATA FROM OUR LOADER
   const movies = useLoaderData();
   const navigate = useNavigate() // get function to send people to other pages
+
+
+
   return (
     <div>
          <button onClick={async () => {
@@ -16,10 +19,10 @@ function Index(props) {
       
         <h2>Create a new movie </h2>
         <Form action="/create" method="post">
-            <input type="text" name="Title" placeholder="Movie's title"/>
-            <input type="text" name="Genres" placeholder="Movie's Genres"/>
-            <input type="text" name="ReleaseDate" placeholder="Movie's Release date"/>
-            <input type="text" name="Poster" placeholder="Movie's Poster"/>
+            <input type="text" name="title" placeholder="Movie's title"/>
+            <input type="text" name="genres" placeholder="Movie's Genres"/>
+            <input type="text" name="releaseDate" placeholder="Movie's Release date"/>
+            <input type="text" name="poster" placeholder="Movie's Poster"/>
             <input type="submit" value="Create a movie"/>
         </Form>
 
@@ -27,9 +30,9 @@ function Index(props) {
         return (
           <div key={movie._id} className="movie">
             <Link to={`/${movie._id}`}>
-              <h1>{movie.Title}</h1>
+              <h1>{movie.tile}</h1>
             </Link>
-            <img src={movie.Poster} alt={movie.Title} />
+            <img src={movie.image} alt={movie.name} />
              <h3>{movie.Genres}</h3>
             <h4>{movie.Releasedate}</h4>
           </div>
@@ -41,4 +44,3 @@ function Index(props) {
 
 export default Index;
 
-//hello
