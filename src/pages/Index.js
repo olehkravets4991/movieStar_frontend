@@ -5,7 +5,9 @@ import { baseUrl } from "../base_url";
 function Index(props) {
   // GET THE DATA FROM OUR LOADER
   const movies = useLoaderData();
-  const navigate = useNavigate()
+  const navigate = useNavigate() // get function to send people to other pages
+
+
 
   return (
     <div>
@@ -42,4 +44,3 @@ function Index(props) {
 
 export default Index;
 
-//hello
