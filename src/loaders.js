@@ -1,5 +1,5 @@
 import {baseUrl} from './base_url';
-import { redirect } from 'react-router-dom';
+import {redirect} from 'react-router-dom';
 
 const authCheck =  () => {
     const loggedIn = localStorage.getItem('loggedIn')
