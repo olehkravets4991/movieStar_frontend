@@ -30,11 +30,11 @@ function Index(props) {
         return (
           <div key={movie._id} className="movie">
             <Link to={`/${movie._id}`}>
-              <h1>{movie.tile}</h1>
+              <h1>{movie.title}</h1>
             </Link>
-            <img src={movie.image} alt={movie.name} />
-             <h3>{movie.Genres}</h3>
-            <h4>{movie.Releasedate}</h4>
+            <img src={movie.poster} alt={movie.name} />
+             <h3>{movie.genres}</h3>
+            <h4>{movie.releaseDate}</h4>
           </div>
         );
       })}
