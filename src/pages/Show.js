@@ -19,7 +19,7 @@ function Show(props) {
         <input type="text" name="poster" placeholder="Movie's Poster" defaultValue={movie.poster}/>
         <input type="submit" value="Update Movie"/>
     </Form>
-    <h2>Delete Person</h2>
+    <h2>Delete Movie</h2>
     <Form action={`/delete/${movie._id}`} method="post">
         <input type="submit" value="Delete Movie"/>
     </Form>
