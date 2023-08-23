@@ -112,9 +112,7 @@
     box-shadow: 1px 1px 10px #ddd,
               -1px -1px 10px #ddd,
               1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
-
-   
+              -1px 1px 10px #ddd;   
 }
 
 .movieForm {
@@ -142,7 +140,9 @@
         box-sizing: border-box;
         border: 1px solid var(black);
         border-radius: 5px;
-    }  
+    } 
+    
+    // see if we can cursor: pointer the submit button
 }
 
 // saved movie list
@@ -172,10 +172,17 @@
 .movie-list-item:hover .movie-list-item-img {
     transform: scale(1.2);
     margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-genre,
+.movie-list-item:hover .movie-list-item-release-date {
+    opacity: 1;
 }
 
 .movie-list-item-img {
-    transition: all 1s ease-in-out;
+    transition: 1s all ease-in-out;
     width: 200px;
     height: 270px;
     object-fit: cover;
@@ -183,33 +190,39 @@
 
 .movie-list-item-title {
     background-color: #333;
+    color: white;
     padding: 10px;
     position: absolute;
     top: 10%;
     left: 50px;
     width: 100px;
-    /* opacity: 0; */
+    opacity: 0;
+    transition: 1s all ease-in-out;
 }
 
 .movie-list-item-genre {
     background-color: #333;
+    color: white;
     padding: 10px;
     font-size: 14px;
     position: absolute;
     top: 30%;
     left: 50px;
     width: 100px;
-     /* opacity: 0; */
+    opacity: 0;
+    transition: 1s all ease-in-out;
 
 }
 
 .movie-list-item-release-date {
     background-color: #333;
+    color: white;
     padding: 10px;
     font-size: 14px;
     position: absolute;
     top: 40%;
     left: 50px;
     width: 100px;
-     /* opacity: 0; */
+    opacity: 0;
+    transition: 1s all ease-in-out;
 }
