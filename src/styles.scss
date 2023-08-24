@@ -22,6 +22,8 @@
         color: white;
         flex: 2;
         font-family: 'Permanent Marker', cursive;
+        font-size: 30px;
+        text-decoration-line: none;
     }
 
     .menu-container {
@@ -104,11 +106,12 @@
 
 .content-container {
     font-family:'Comfortaa', cursive;
-    width: 80vw;
+    width: 50vw;
     height: 35vw;
     margin: 50px auto;
     display: flex;
     border-radius: 10px;
+    background-color: lightgrey;
     box-shadow: 1px 1px 10px #ddd,
               -1px -1px 10px #ddd,
               1px -1px 10px #ddd,
@@ -159,13 +162,15 @@
 .movie-list {
     display: flex;
     align-items: center;
-    height: 300px;
+    height: 500px;
 
 }
 
 .movie-list-title {
     display: absolute;
     margin: 0 0 60px 0;
+    color:#ddd;
+    font-family: 'Comfortaa', cursive;
 }
 
 .movie-list-item {
@@ -188,8 +193,8 @@
 
 .movie-list-item-img {
     transition: 1s all ease-in-out;
-    width: 200px;
-    height: 270px;
+    width: 300px;
+    height: 470px;
     object-fit: cover;
 }
 
@@ -203,6 +208,7 @@
     width: 100px;
     opacity: 0;
     transition: 1s all ease-in-out;
+    font-family: 'Comfortaa', cursive;
 }
 
 .movie-list-item-genre {
@@ -216,6 +222,7 @@
     width: 100px;
     opacity: 0;
     transition: 1s all ease-in-out;
+    font-family: 'Comfortaa', cursive;
 
 }
 
@@ -230,12 +237,13 @@
     width: 100px;
     opacity: 0;
     transition: 1s all ease-in-out;
+    font-family: 'Comfortaa', cursive;
 }
 
 .arrow {
     font-size: 120px;
     position: absolute;
-    top: 1075px;
+    top: 80px;
     color: lightgrey;
     right: 0;
     opacity: 0.5;

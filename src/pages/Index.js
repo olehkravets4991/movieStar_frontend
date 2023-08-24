@@ -1,12 +1,27 @@
 import { Link, useLoaderData, Form, useNavigate} from "react-router-dom";
 import { baseUrl } from "../base_url";
-import background from '../background.jpeg';
-import {BsChevronRight} from 'react-icons/bs';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 function Index(props) {
   // GET THE DATA FROM OUR LOADER
   const movies = useLoaderData();
   const navigate = useNavigate() // get function to send people to other pages
+
+  const responsive = {
+    extraWideDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
   return (
     <div className="container">
@@ -38,32 +53,32 @@ function Index(props) {
           </div>
         </div>   
         </div>  
-   
+  
       <div className="movie-list-container">
         <div className="movie-list-title"><h1>MOVIE LIST</h1></div>
         <div className="movie-list-wrapper">
-
-          <div className="movie-list">
-        {movies.map((movie, index) => {
-          return (           
-            <div key={movie._id} className="movie-list-item">
-              <img className="movie-list-item-img" src={movie.poster} alt={movie.name} />
-              <Link to={`/${movie._id}`}>
-                <h3 className="movie-list-item-title">{movie.title}</h3>
-              </Link>
-              <h3 className="movie-list-item-genre">{movie.genres}</h3>
-              <h4 className="movie-list-item-release-date">{movie.releaseDate}</h4>
-            </div>
-          );
-        })}
-        </div>
+        <Carousel responsive={responsive}>
+        <div className="movie-list">
+          {movies.map((movie, index) => {
+            return (           
+              <div key={movie._id} className="movie-list-item">
+                <img className="movie-list-item-img" src={movie.poster} alt={movie.name} />
+                <Link to={`/${movie._id}`}>
+                  <h3 className="movie-list-item-title">{movie.title}</h3>
+                </Link>
+                <h3 className="movie-list-item-genre">{movie.genres}</h3>
+                <h4 className="movie-list-item-release-date">{movie.releaseDate}</h4>
+              </div>
+            );
+           })}
       </div>
+      </Carousel>
+      </div>  
       </div>
-      <div className="arrow"><BsChevronRight /></div>
-    </div>
- 
-  );
+    </div>  
+  );  
 }
 
 export default Index;
+  
 
