@@ -151,6 +151,11 @@
     padding: 20px;
 }
 
+.movie-list-wrapper {
+    position: relative;
+
+}
+
 .movie-list {
     display: flex;
     align-items: center;
@@ -225,4 +230,14 @@
     width: 100px;
     opacity: 0;
     transition: 1s all ease-in-out;
+}
+
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 1075px;
+    color: lightgrey;
+    right: 0;
+    opacity: 0.5;
+    cursor: pointer;
 }

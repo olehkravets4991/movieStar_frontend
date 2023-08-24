@@ -1,7 +1,7 @@
 import { Link, useLoaderData, Form, useNavigate} from "react-router-dom";
 import { baseUrl } from "../base_url";
 import background from '../background.jpeg';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {BsChevronRight} from 'react-icons/bs';
 
 function Index(props) {
   // GET THE DATA FROM OUR LOADER
@@ -59,7 +59,7 @@ function Index(props) {
         </div>
       </div>
       </div>
-      <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+      <div className="arrow"><BsChevronRight /></div>
     </div>
  
   );
