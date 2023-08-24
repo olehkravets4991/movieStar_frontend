@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import profilepic from '../profilepic.jpeg';
-import moon from '../moon.svg';
-import sun from '../sun.svg';
+
 
 function Header(props) {
     return <nav className="header"> 
@@ -20,8 +19,6 @@ function Header(props) {
                 <img className="profile-picture" src={profilepic} alt="profile picture"/>
                 <div className="profile-text-container">Welcome!</div>
                 <div className="toggle">
-                    <i className="moon toggle-icon" src={moon}></i>
-                    <i className="sun toggle-icon" src={sun}></i>    
                     <div className="toggle-ball"></div>
                 </div>
             </div>
