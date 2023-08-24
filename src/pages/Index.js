@@ -1,12 +1,31 @@
 import { Link, useLoaderData, Form, useNavigate} from "react-router-dom";
 import { baseUrl } from "../base_url";
-import { useRef, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {BsChevronRight} from 'react-icons/bs';
 
 function Index(props) {
   // GET THE DATA FROM OUR LOADER
   const movies = useLoaderData();
   const navigate = useNavigate() // get function to send people to other pages
+
+// state to track the position of the movie list
+const [position, setPosition] = useState(0);
+
+// handle the arrow click to move the list to the right
+const handleArrowClick = () => {
+  const increment = 200;
+  setPosition(prevPosition => prevPosition + increment);
+};
+
+// useEffect(() => {
+//   // add event listener for the arrow click
+//   const arrow = document.querySelector(".arrow");
+//   arrow.addEventListener('click', handleArrowClick);
+
+//   return () => {
+//     arrow.removeEventListener('click', handleArrowClick);
+//   };
+// }, []);
 
   return (
     <div className="container">
@@ -42,35 +61,28 @@ function Index(props) {
       <div className="movie-list-container">
         <div className="movie-list-title"><h1>MOVIE LIST</h1></div>
         <div className="movie-list-wrapper">
-
-          <div className="movie-list">
-        {movies.map((movie, index) => {
-          return (           
-            <div key={movie._id} className="movie-list-item">
-              <img className="movie-list-item-img" src={movie.poster} alt={movie.name} />
-              <Link to={`/${movie._id}`}>
-                <h3 className="movie-list-item-title">{movie.title}</h3>
-              </Link>
-              <h3 className="movie-list-item-genre">{movie.genres}</h3>
-              <h4 className="movie-list-item-release-date">{movie.releaseDate}</h4>
-            </div>
-          );
-        })}
+          <div className="movie-list" style={{ transform: `translateX(${position}px)`}}>
+            {movies.map((movie, index) => {
+              return (           
+                <div key={movie._id} className="movie-list-item">
+                  <img className="movie-list-item-img" src={movie.poster} alt={movie.name} />
+                  <Link to={`/${movie._id}`}>
+                    <h3 className="movie-list-item-title">{movie.title}</h3>
+                  </Link>
+                  <h3 className="movie-list-item-genre">{movie.genres}</h3>
+                  <h4 className="movie-list-item-release-date">{movie.releaseDate}</h4>
+                </div>
+              );
+            })}
+        </div>
+        <div className="arrow" onClick={handleArrowClick}>
+          <BsChevronRight />
         </div>
       </div>
       </div>  
     </div>
   );
 }
-
-const Arrow = ({onClick}) => {
- return (
-    <div className="arrow" onClick={onClick}>
-      <BsChevronRight />
-    </div>
-  );
-};
-
 
 export default Index;
 
