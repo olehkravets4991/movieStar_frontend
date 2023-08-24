@@ -5,7 +5,7 @@ import profilepic from '../profilepic.jpeg';
 function Header(props) {
     return <nav className="header"> 
         <div className="header-container">
-            <div className="logo-container"><h1 className="logo">Movie Star</h1></div>
+            <div className="logo-container">Movie Star</div>
             <div className="menu-container">
                 <ul className="menu-list">
                     <li className="menu-list-item"><Link to="/">Home</Link></li>

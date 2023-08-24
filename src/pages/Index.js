@@ -1,6 +1,6 @@
 import { Link, useLoaderData, Form, useNavigate} from "react-router-dom";
 import { baseUrl } from "../base_url";
-import background from '../background.jpeg';
+import { useRef, useEffect } from 'react';
 import {BsChevronRight} from 'react-icons/bs';
 
 function Index(props) {
@@ -58,12 +58,19 @@ function Index(props) {
         })}
         </div>
       </div>
-      </div>
-      <div className="arrow"><BsChevronRight /></div>
+      </div>  
     </div>
- 
   );
 }
+
+const Arrow = ({onClick}) => {
+ return (
+    <div className="arrow" onClick={onClick}>
+      <BsChevronRight />
+    </div>
+  );
+};
+
 
 export default Index;
 
