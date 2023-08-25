@@ -9,17 +9,20 @@ function Index(props) {
   const navigate = useNavigate() // get function to send people to other pages
 
   const responsive = {
-    extraWideDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 3,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
     }
   };
 
@@ -42,37 +45,37 @@ function Index(props) {
                 <label>Title:</label> 
                 <input type="text" name="title" placeholder="Movie title"/>
                 <label>Genre:</label>  
-                <input type="text" name="genres"/>
+                <input type="text" name="genres" placeholder="Genre of the movie"/>
                 <label>Release Date:</label>  
-                <input type="text" name="releaseDate"/>
+                <input type="text" name="releaseDate" placeholder="Year the movie was released"/>
                 <label>Poster Image URL:</label>  
-                <input type="text" name="poster"/>              
+                <input type="text" name="poster" placeholder="Movie poster image URL"/>              
               </fieldset>
               <input type="submit" value="Create a movie"/>
             </Form>
           </div>
         </div>   
         </div>  
-  
+
       <div className="movie-list-container">
         <div className="movie-list-title"><h1>MOVIE LIST</h1></div>
         <div className="movie-list-wrapper">
         <Carousel responsive={responsive}>
         <div className="movie-list">
-          {movies.map((movie, index) => {
+        {movies.map((movie, index) => {
             return (           
               <div key={movie._id} className="movie-list-item">
                 <img className="movie-list-item-img" src={movie.poster} alt={movie.name} />
                 <Link to={`/${movie._id}`}>
                   <h3 className="movie-list-item-title">{movie.title}</h3>
                 </Link>
-                <h3 className="movie-list-item-genre">{movie.genres}</h3>
-                <h4 className="movie-list-item-release-date">{movie.releaseDate}</h4>
+                <h3 className="movie-list-item-genre">Genre: {movie.genres}</h3>
+                <h4 className="movie-list-item-release-date">Year: {movie.releaseDate}</h4>
               </div>
             );
            })}
       </div>
-      </Carousel>
+      </Carousel>;
       </div>  
       </div>
     </div>  

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import profilepic from '../profilepic.jpeg';
+import profilepic from '../profilepic.png';
 
 
 function Header(props) {
