@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
+body {
+    background-color: #333;
+}
 // ---------------------
 // Header
 // ---------------------
@@ -61,34 +64,7 @@
         .profile-text-container {
             margin: 0 20px;
             font-family: 'Comfortaa', cursive;
-        }
-        
-        .toggle {
-            width: 40px;
-            height: 20px;
-            background-color: white;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            position: relative;
-
-            .toggle-icon {
-                color: black;
-            }
-
-            .toggle-ball {
-                width: 18px;
-                height: 18px;
-                background-color: black;
-                position: absolute;
-                right: 1px;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-        }
-
-       
+        }   
     }
 }
 
@@ -156,33 +132,35 @@
 
 .movie-list-wrapper {
     position: relative;
-
 }
 
 .movie-list {
     display: flex;
     align-items: center;
     height: 500px;
+    width: 100%;
 
 }
 
 .movie-list-title {
     display: absolute;
     margin: 0 0 60px 0;
-    color:#ddd;
+    color:darkslategray;
     font-family: 'Comfortaa', cursive;
 }
 
 .movie-list-item {
     margin-right: 30px;
     position: relative;
-    
+    border-radius: 5%;    
 }
 
 .movie-list-item:hover .movie-list-item-img {
+    border-radius: 5%;
     transform: scale(1.2);
     margin: 0 30px;
     opacity: 0.5;
+   
 }
 
 .movie-list-item:hover .movie-list-item-title,
@@ -196,6 +174,7 @@
     width: 300px;
     height: 470px;
     object-fit: cover;
+    border-radius: 5%;
 }
 
 .movie-list-item-title {
@@ -205,7 +184,7 @@
     position: absolute;
     top: 10%;
     left: 50px;
-    width: 100px;
+    width: 150px;
     opacity: 0;
     transition: 1s all ease-in-out;
     font-family: 'Comfortaa', cursive;
@@ -219,7 +198,7 @@
     position: absolute;
     top: 30%;
     left: 50px;
-    width: 100px;
+    width: 150px;
     opacity: 0;
     transition: 1s all ease-in-out;
     font-family: 'Comfortaa', cursive;
@@ -234,18 +213,8 @@
     position: absolute;
     top: 40%;
     left: 50px;
-    width: 100px;
+    width: 150px;
     opacity: 0;
     transition: 1s all ease-in-out;
     font-family: 'Comfortaa', cursive;
-}
-
-.arrow {
-    font-size: 120px;
-    position: absolute;
-    top: 80px;
-    color: lightgrey;
-    right: 0;
-    opacity: 0.5;
-    cursor: pointer;
 }
