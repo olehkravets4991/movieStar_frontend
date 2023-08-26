@@ -1,0 +1,43 @@
+.movie-desc {
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+    margin: 30px;
+    font-family: 'Comfortaa', cursive;
+
+
+}
+.movie-title-show {
+    color: aliceblue;
+    font-family: 'Comfortaa', cursive;
+    font-size: 60px;
+}
+.movie-poster-show {
+    height: 700px;
+    width: 500px;
+}
+
+.movie-update {
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: darkslategrey;
+    font-family: 'Comfortaa', cursive;
+    background-color: white;
+}
+
+
+.lala{
+    text-align: center;
+}
+
+.movie-delete{
+ text-align: center;
+ color: aliceblue;
+ font-family: 'Comfortaa', cursive;
+}

@@ -15,7 +15,7 @@ function Main(props){
     };
 
     return (
-        <div className="main-container bg-home">
+        <div className="main-container">
             <h1 className='welcome'>Welcome to the Movie Star App</h1>
             <h3 className='signup-prompt'>Do you want to sign up?</h3>
             <Link to="/signup">
