@@ -6,33 +6,33 @@ function Show(props) {
   console.log(movie);
 
   return (
-    <div className="movie">
+    <div className="movie-show">
 
-      <div className="description">
-      <h1>{movie.title}</h1>
-      <h2>{movie.genres}</h2>
-      <h3>{movie.releaseDate}</h3>
-      <img src={movie.poster} alt={movie.title} />
+      <div className="movie-desc">
+        <h1 className="movie-title-show">{movie.title}</h1>
+        <h3 classname="movie-genre-show">Genre: {movie.genres}</h3>
+        <h3 className="movie-releaseDate-show">Year Released: {movie.releaseDate}</h3>
+        <img className="movie-poster-show" src={movie.poster} alt={movie.title} />
       </div>
 
-<div className="show">
-    <h2>Update {movie.title}</h2>
-    <Form action={`/update/${movie._id}`} method="post">
-        <input type="text" name="title" placeholder="Movie's Title" defaultValue={movie.title}/>
-        <input type="text" name="genres" placeholder="Movie's Genres" defaultValue={movie.genres}/>
-        <input type="text" name="releaseDate" placeholder="Movie's Release date" defaultValue={movie.releaseDate}/>
-        <input type="text" name="poster" placeholder="Movie's Poster" defaultValue={movie.poster}/>
-        <input  className="lala"  type="submit" value="Update Movie"/>
-    </Form>
+
+    <div className="movie-update">
+      <h2 className="movie-update-show"> Update {movie.title}</h2>
+      <Form action={`/update/${movie._id}`} method="post">
+          <input type="text" name="title" placeholder="Movie's Title" defaultValue={movie.title}/>
+          <input type="text" name="genres" placeholder="Movie's Genres" defaultValue={movie.genres}/>
+          <input type="text" name="releaseDate" placeholder="Movie's Release date" defaultValue={movie.releaseDate}/>
+          <input type="text" name="poster" placeholder="Movie's Poster" defaultValue={movie.poster}/>
+          <input  className="lala"  type="submit" value="Update Movie"/>
+      </Form>
     </div>
 
-<div className="delete">
-    <h2>Delete Person</h2>
-    <Form action={`/delete/${movie._id}`} method="post">
-        <input type="submit" value="Delete Movie"/>
-    </Form>
-    </div>
-
+    <div className="movie-delete">
+      <h2 className="movie-delete-show">Delete This Movie</h2>
+      <Form action={`/delete/${movie._id}`} method="post">
+          <input type="submit" value="Delete Movie"/>
+      </Form>
+      </div>
     </div>
   );
 }

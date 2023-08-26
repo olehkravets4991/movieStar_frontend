@@ -1,11 +1,11 @@
 /* Login.css */
 
 .main-container {
-  background-image: url('https://i.imgur.com/xmJxVs7.png'); /* URL to your image */
+  background-image: url('../background.png');
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This keeps the background image fixed while scrolling */
-  background-position: absolute;
+  background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 
   /* Style for the login container */
@@ -14,8 +14,10 @@
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Comfortaa', cursive;
   }
 
   .signup-container {
@@ -23,8 +25,10 @@
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Comfortaa', cursive;
   }
   
   /* Style for labels */
@@ -38,7 +42,7 @@
     border-top-right-radius: 30px 30px;
     border-bottom-left-radius: 30px 30px;
     border-bottom-right-radius: 30px 30px;
-    width: 80px;
+    width: 100px;
   }
 
   .password {
@@ -51,7 +55,7 @@
     border-top-right-radius: 30px 30px;
     border-bottom-left-radius: 30px 30px;
     border-bottom-right-radius: 30px 30px;
-    width: 80px;
+    width: 100px;
   }
   
   /* Style for input fields */
@@ -107,8 +111,11 @@
     border-top-right-radius: 30px 30px;
     border-bottom-left-radius: 30px 30px;
     border-bottom-right-radius: 30px 30px;
-    width: 470px;
+    width: 550px;
+    padding: 20px;
     margin: 25px auto;
+    
+    font-family: 'Comfortaa', cursive;
 }
 
 .login-prompt {
@@ -119,8 +126,10 @@
   border-top-right-radius: 30px 30px;
   border-bottom-left-radius: 30px 30px;
   border-bottom-right-radius: 30px 30px;
-  width: 200px;
+  width: 300px;
+  padding: 20px;
   margin: auto;
+  font-family: 'Comfortaa', cursive;
 }
 
 .signup-prompt {
@@ -131,7 +140,9 @@
   border-top-right-radius: 30px 30px;
   border-bottom-left-radius: 30px 30px;
   border-bottom-right-radius: 30px 30px;
-  width: 200px;
+  width: 300px;
+  padding: 20px;
   margin: auto;
+  font-family: 'Comfortaa', cursive;
 }
   

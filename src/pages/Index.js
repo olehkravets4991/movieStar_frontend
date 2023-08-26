@@ -60,21 +60,21 @@ function Index(props) {
       <div className="movie-list-container">
         <div className="movie-list-title"><h1>MOVIE LIST</h1></div>
         <div className="movie-list-wrapper">
-        <Carousel responsive={responsive}>
-        <div className="movie-list">
+        <Carousel responsive={responsive} className="movie-list">
         {movies.map((movie, index) => {
             return (           
               <div key={movie._id} className="movie-list-item">
                 <img className="movie-list-item-img" src={movie.poster} alt={movie.name} />
+                <div className="movie-details">
                 <Link to={`/${movie._id}`}>
                   <h3 className="movie-list-item-title">{movie.title}</h3>
                 </Link>
-                <h3 className="movie-list-item-genre">Genre: {movie.genres}</h3>
+                <h4 className="movie-list-item-genre">Genre: {movie.genres}</h4>
                 <h4 className="movie-list-item-release-date">Year: {movie.releaseDate}</h4>
+              </div>
               </div>
             );
            })}
-      </div>
       </Carousel>;
       </div>  
       </div>
